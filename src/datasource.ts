@@ -297,7 +297,7 @@ export default class SumoLogicMetricsDatasource {
           let firstAdded = false;
           for (let k = 0; k < dimensions.length; k++) {
             let dimension = dimensions[k];
-            if (dimension.legend === true) {
+            if (dimension.legend === true && dimension.key != "metric") {
               if (firstAdded) {
                 target += ",";
               }
